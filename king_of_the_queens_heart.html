@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>The King of the Queen's Heart</title>
+<style>
+:root{--gold:#e8c56b;--gold2:#b88a2d;--black:#090909;--panel:#15130f;--muted:#c9c1ae}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#30230e 0%,#11100d 35%,#070707 75%);color:#fff8e8;font-family:Georgia,"Times New Roman",serif;display:flex;align-items:center;justify-content:center;padding:22px}
+main{width:min(760px,100%);min-height:620px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #8b6928;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(25,22,16,.97),rgba(7,7,7,.98));box-shadow:0 0 50px #000,0 0 28px #b88a2d1a}
+.topline{height:5px;background:linear-gradient(90deg,#6d4c13,#ffe7a1,#9a6b1c,#ffe7a1,#6d4c13)}
+header{text-align:center;padding:24px 22px 6px}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font:11px Arial,sans-serif}
+.crown{font-size:44px;margin:12px 0 3px;filter:drop-shadow(0 0 10px #c59a3b55)}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.08;margin:8px 0;color:var(--gold);font-weight:normal}
+.subtitle{color:#d7c9a5;font:13px Arial,sans-serif;letter-spacing:1px}
+.progress{display:flex;justify-content:center;gap:8px;padding:18px 12px 0}
+.dot{width:8px;height:8px;border-radius:50%;border:1px solid var(--gold2);background:#29241a;transition:.25s}
+.dot.active{background:var(--gold);box-shadow:0 0 10px #e8c56b88}
+.stage{padding:24px clamp(20px,6vw,52px);flex:1;display:flex;align-items:center;justify-content:center}
+.screen{display:none;width:100%;text-align:center;animation:fade .45s ease}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.screen h2{font-size:clamp(24px,4vw,34px);font-weight:normal;color:var(--gold);margin:0 0 20px}
+.screen p{font-size:clamp(16px,2.5vw,19px);line-height:1.85;color:#eee4ce;margin:12px auto;max-width:580px}
+.highlight{color:var(--gold);font-style:italic}
+.card{border:1px solid #6c5227;border-radius:16px;padding:22px;margin:18px auto;max-width:560px;background:linear-gradient(135deg,#201a0f,#0d0d0d)}
+.big-number{font-size:44px;color:var(--gold);margin:8px}
+.dua{font-size:clamp(20px,3vw,27px)!important;color:#f5d98b!important;line-height:1.65!important}
+.small{font:12px Arial,sans-serif!important;color:#bdb29b!important;letter-spacing:.5px}
+button{cursor:pointer;border:1px solid var(--gold);border-radius:999px;padding:13px 22px;font: bold 13px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px)}
+.primary{color:#171106;background:linear-gradient(135deg,#ffe8a2,#c79637);box-shadow:0 5px 20px #c7963725}
+.secondary{color:var(--gold);background:transparent}
+.controls{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:8px 20px 25px}
+footer{text-align:center;border-top:1px solid #4a391c;padding:15px 10px;color:#9c9076;font:11px Arial,sans-serif;letter-spacing:1px}
+.heart{color:#e8c56b}
+@media(max-width:480px){body{padding:10px}main{min-height:calc(100vh - 20px);border-radius:18px}header{padding-top:20px}.stage{padding-top:15px;padding-bottom:15px}.screen p{line-height:1.7}.controls{padding-bottom:20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="topline"></div>
+  <header>
+    <div class="eyebrow">A little corner made just for you</div>
+    <div class="crown" aria-hidden="true">♛</div>
+    <h1>The King of the<br>Queen's Heart</h1>
+    <div class="subtitle">A birthday surprise • Made with love, duas & gratitude</div>
+    <div class="progress" id="progress" aria-label="Surprise progress">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </header>
+
+  <section class="stage" aria-live="polite">
+    <article class="screen active">
+      <h2>As-salāmu ‘alayka, Birthday King ✨</h2>
+      <p>Today, this little page has one mission: to remind you that your presence in someone's life can be a gift all by itself.</p>
+      <div class="card"><div class="big-number">♛</div><p class="highlight">Ready to unlock your birthday surprises?</p><p class="small">Six little moments. One very special person.</p></div>
+      <p>Take your time, Your Majesty. The next button is your royal key. 👑</p>
+    </article>
+
+    <article class="screen">
+      <h2>01 · A little appreciation</h2>
+      <p>Some people make ordinary conversations feel special. Some remind us to keep trying, keep learning, and keep becoming better.</p>
+      <p>I'm grateful for your friendship, your effort, your determination, and the little ways you bring happiness into my days.</p>
+      <div class="card"><p class="highlight">May you never forget how much good you can bring into this world.</p></div>
+    </article>
+
+    <article class="screen">
+      <h2>02 · A royal decree 📜</h2>
+      <div class="card">
+        <p>By the authority vested in the Court of the Queen's Heart, you are hereby granted:</p>
+        <p>✨ Unlimited birthday smiles<br>✨ Permission to dream ridiculously big<br>✨ A lifetime reminder to believe in your growth<br>✨ One official title: <span class="highlight">King of the Queen's Heart</span></p>
+        <p class="small">This decree is valid from today onward. Appeals may be submitted with cake. 🎂</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <h2>03 · A dua for your new year 🤲</h2>
+      <div class="card">
+        <p class="dua" lang="ar" dir="rtl">اللَّهُمَّ احْفَظْهُ، وَوَفِّقْهُ لِكُلِّ خَيْرٍ، وَارْزُقْهُ عِلْمًا نَافِعًا وَقَلْبًا مُطْمَئِنًّا</p>
+        <p class="small">O Allah, protect him, guide him toward every good, and grant him beneficial knowledge and a peaceful heart.</p>
+      </div>
+      <p>May Allah bless your age, your health, your knowledge, your efforts, your family, and your future. May He keep you firm upon what pleases Him, open beautiful doors for you, and protect you from what harms you. Āmīn. 🤍</p>
+    </article>
+
+    <article class="screen">
+      <h2>04 · A wish for your dreams 🌙</h2>
+      <p>May the hard work you do quietly become a success you can look back on with gratitude.</p>
+      <p>May you have the courage to begin, the patience to continue, the humility to learn, and the wisdom to choose what is good for your dunya and ākhirah.</p>
+      <div class="card"><p class="highlight">Keep growing, keep learning, and keep trusting Allah with the parts of the future you cannot see yet.</p></div>
+    </article>
+
+    <article class="screen">
+      <h2>05 · One last message 💛</h2>
+      <p>More than the birthday wishes, I hope you feel celebrated, appreciated, and remembered today.</p>
+      <p>Thank you for being you. I pray that whatever Allah has written for your life is filled with khayr, barakah, peace, and people who sincerely want good for you.</p>
+      <div class="card">
+        <p class="dua">Happy Birthday, dear bestie. 🎂</p>
+        <p>May your next chapter be gentler, brighter, wiser, and full of reasons to say <span class="highlight">Alhamdulillāh.</span></p>
+        <p class="small">With duas, appreciation, and a little royal mischief. ♛</p>
+      </div>
+      <p class="highlight">Āmīn, thumma āmīn. 🤲</p>
+    </article>
+  </section>
+
+  <nav class="controls" aria-label="Surprise navigation">
+    <button class="secondary" id="back" type="button" hidden>← Back</button>
+    <button class="primary" id="next" type="button">Unlock Surprise →</button>
+    <button class="secondary" id="restart" type="button" hidden>↻ Start Again</button>
+  </nav>
+  <footer>MADE WITH A GRATEFUL HEART <span class="heart">♥</span> MAY ALLAH PUT BARAKAH IN YOUR YEARS</footer>
+</main>
+<script>
+(() => {
+  const screens = [...document.querySelectorAll('.screen')];
+  const dots = [...document.querySelectorAll('.dot')];
+  const back = document.getElementById('back');
+  const next = document.getElementById('next');
+  const restart = document.getElementById('restart');
+  let current = 0;
+  function show(index) {
+    current = index;
+    screens.forEach((screen, i) => screen.classList.toggle('active', i === current));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i <= current));
+    back.hidden = current === 0;
+    next.hidden = current === screens.length - 1;
+    restart.hidden = current !== screens.length - 1;
+    next.textContent = current === 0 ? 'Unlock Surprise →' : 'Next Surprise →';
+  }
+  next.addEventListener('click', () => show(Math.min(current + 1, screens.length - 1)));
+  back.addEventListener('click', () => show(Math.max(current - 1, 0)));
+  restart.addEventListener('click', () => show(0));
+})();
+</script>
+</body>
+</html>
